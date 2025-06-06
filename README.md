@@ -1,5 +1,3 @@
-# Spec-Tool
-Interactive Spec software
 <!DOCTYPE html>
 <html lang="en">
 <head>
