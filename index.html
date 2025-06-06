@@ -821,11 +821,9 @@
     // Set to keep track of selected images on the client page.
     let selectedImages = new Set();
     let showNumbering = false;
-    // Clear localStorage and initialize empty arrays on page load
-    localStorage.removeItem("savedExperiences");
-    localStorage.removeItem("analyticsData");
-    let savedExperiences = [];
-    let analyticsData = [];
+    // Load saved data from localStorage
+    let savedExperiences = JSON.parse(localStorage.getItem("savedExperiences") || "[]");
+    let analyticsData = JSON.parse(localStorage.getItem("analyticsData") || "[]");
     let editingExperienceId = null; // Track if we're editing an existing experience
     let experienceToDelete = null; // Track which experience to delete
     let currentExperienceName = null; // Track the current experience name
